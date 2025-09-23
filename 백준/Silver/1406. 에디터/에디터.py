@@ -32,7 +32,7 @@ for i in range(n):
         cur = nxt[cur]
     elif cmd == 'B' and pre[cur] != -1:
         nxt[pre[cur]] = nxt[cur]
-        if nxt[cur] != -1: pre[nxt[cur]] = pre[cur]
+        pre[nxt[cur]] = pre[cur]
         cur = pre[cur]
         length -= 1
     elif 'P' in cmd:
